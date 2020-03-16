@@ -1,0 +1,23 @@
+{
+  "name": "curriculum",
+  "version": "1.0.0",
+  "description": "curriculum",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w styles -o public/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BBLopez/curriculum.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BBLopez/curriculum/issues"
+  },
+  "homepage": "https://github.com/BBLopez/curriculum#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
