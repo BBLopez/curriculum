@@ -1,0 +1,245 @@
+/* COLORS */
+body .main-container section.left header {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); }
+
+body .main-container .about-me, body .main-container section.left header {
+  text-shadow: 1px 1px 1px #000; }
+
+body {
+  font-family: 'Baloo Bhai 2', cursive; }
+
+body .main-container section.left .content .pink-square-right::after, body .main-container section.left .content .pink-square-list li::before, body .main-container section.left .content .pink-square-block::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background-color: #D58F94;
+  transform: rotate(45deg); }
+
+body .main-container .about-me::before, body .main-container .about-me::after, body .main-container .work-experience header::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("../img/cherry-blossom1.png");
+  background-repeat: no-repeat;
+  filter: invert(1) contrast(1%) brightness(60%);
+  opacity: 0.5; }
+
+body .main-container .training header::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("../img/cherry-blossom2.png");
+  background-repeat: no-repeat;
+  opacity: 0.2; }
+
+body, html {
+  margin: 0;
+  height: 100%;
+  font-size: 62.5%; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: #000; }
+  body .bold {
+    font-weight: 700; }
+  body .cursive {
+    font-style: italic; }
+  body .main-container {
+    display: grid;
+    grid-template-areas: 'about-me work-experience work-experience' 'about-me technical-skills technical-skills' 'about-me general-skills languages' 'about-me training training' 'about-me other-experience other-experience';
+    grid-template-columns: 250px 1fr 1fr;
+    grid-gap: 0;
+    margin: 0 auto;
+    max-width: 768px;
+    background-color: #1C1C1C;
+    padding-top: 20px;
+    font-size: 1.3rem; }
+    @media screen and (max-width: 768px) {
+      body .main-container {
+        grid-template-areas: 'about-me work-experience work-experience' 'about-me technical-skills technical-skills' 'about-me general-skills general-skills' 'about-me languages languages' 'about-me training training' 'about-me other-experience other-experience'; } }
+    @media screen and (max-width: 500px) {
+      body .main-container {
+        grid-template-areas: 'about-me about-me about-me' 'work-experience work-experience work-experience' 'technical-skills technical-skills technical-skills' 'general-skills general-skills general-skills' 'languages languages languages' 'training training training' 'other-experience other-experience other-experience';
+        font-size: 1.8rem; } }
+    body .main-container .about-me {
+      grid-area: about-me;
+      color: #D58F94;
+      position: relative;
+      z-index: 1; }
+      body .main-container .about-me::before {
+        background-position: -15px 20%;
+        background-size: 100%; }
+        @media screen and (max-width: 500px) {
+          body .main-container .about-me::before {
+            background-position: -15px 95%; } }
+      body .main-container .about-me::after {
+        background-position: 100% 113%;
+        background-size: 245%; }
+        @media screen and (max-width: 500px) {
+          body .main-container .about-me::after {
+            display: none; } }
+      body .main-container .about-me .image {
+        width: 60%;
+        margin: 0 auto 20px; }
+        body .main-container .about-me .image img {
+          display: block;
+          width: 100%; }
+      body .main-container .about-me .name {
+        text-align: center;
+        margin-bottom: 40px; }
+        body .main-container .about-me .name div:first-child {
+          color: #fff;
+          font-size: 1.5rem; }
+          @media screen and (max-width: 500px) {
+            body .main-container .about-me .name div:first-child {
+              font-size: 2rem; } }
+      body .main-container .about-me ul {
+        list-style: none;
+        padding-left: 30px;
+        margin-bottom: 30px; }
+        body .main-container .about-me ul li {
+          margin-bottom: 20px; }
+          @media screen and (max-width: 500px) {
+            body .main-container .about-me ul li {
+              margin-bottom: 0; } }
+          body .main-container .about-me ul li div:first-child {
+            color: #fff; }
+    body .main-container section.left {
+      background-color: #fff; }
+      body .main-container section.left header {
+        padding: 12px 0 12px 40px;
+        color: #fff; }
+        body .main-container section.left header h1 {
+          margin: 0;
+          font-size: 1.5rem;
+          font-weight: 400; }
+          @media screen and (max-width: 500px) {
+            body .main-container section.left header h1 {
+              font-size: 2.5rem; } }
+      body .main-container section.left .content {
+        padding: 20px 40px;
+        color: #1C1C1C; }
+        @media screen and (max-width: 500px) {
+          body .main-container section.left .content {
+            padding: 30px 40px; } }
+        body .main-container section.left .content h2 {
+          font-weight: 700;
+          font-size: 1.3rem;
+          margin: 0; }
+          @media screen and (max-width: 500px) {
+            body .main-container section.left .content h2 {
+              font-size: 1.8rem; } }
+        body .main-container section.left .content .pink-square-right::after {
+          position: relative;
+          display: inline-block;
+          margin: 0 10px 0 7px;
+          top: 50%;
+          transform: rotate(45deg) translateY(-50%); }
+        body .main-container section.left .content .pink-square-list {
+          list-style: none;
+          padding: 0; }
+          body .main-container section.left .content .pink-square-list li {
+            position: relative;
+            padding-left: 15px; }
+            body .main-container section.left .content .pink-square-list li::before {
+              position: absolute;
+              display: inline-block;
+              left: 0;
+              top: 7px;
+              transform: rotate(45deg); }
+              @media screen and (max-width: 500px) {
+                body .main-container section.left .content .pink-square-list li::before {
+                  top: 10px; } }
+            @media screen and (max-width: 500px) {
+              body .main-container section.left .content .pink-square-list li {
+                margin-bottom: 20px; } }
+        body .main-container section.left .content .pink-square-block {
+          position: relative;
+          padding-left: 15px;
+          margin-bottom: 10px; }
+          @media screen and (max-width: 500px) {
+            body .main-container section.left .content .pink-square-block {
+              margin-bottom: 20px; } }
+          body .main-container section.left .content .pink-square-block::before {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 7px; }
+            @media screen and (max-width: 500px) {
+              body .main-container section.left .content .pink-square-block::before {
+                top: 10px; } }
+          body .main-container section.left .content .pink-square-block:last-of-type {
+            margin-bottom: 0; }
+    body .main-container .work-experience {
+      grid-area: work-experience; }
+      body .main-container .work-experience header {
+        background-color: #003334;
+        position: relative;
+        z-index: 1; }
+        body .main-container .work-experience header::after {
+          background-position: -13% 69%;
+          background-size: 45%;
+          transform: rotateY(180deg);
+          filter: invert(1) contrast(1%) brightness(80%); }
+          @media screen and (max-width: 500px) {
+            body .main-container .work-experience header::after {
+              background-size: 55%; } }
+    body .main-container .technical-skills {
+      grid-area: technical-skills; }
+      body .main-container .technical-skills header {
+        background-color: #003466; }
+      body .main-container .technical-skills .content {
+        display: flex;
+        flex-wrap: wrap; }
+        body .main-container .technical-skills .content .technical-skill {
+          margin-bottom: 20px;
+          width: 50%;
+          padding-right: 30px; }
+          @media screen and (max-width: 767px) {
+            body .main-container .technical-skills .content .technical-skill {
+              width: 100%; } }
+          body .main-container .technical-skills .content .technical-skill:last-of-type, body .main-container .technical-skills .content .technical-skill:last-of-type(2) {
+            margin-bottom: 0; }
+    body .main-container .general-skills {
+      grid-area: general-skills; }
+      body .main-container .general-skills header {
+        background-color: #811900; }
+    body .main-container .languages {
+      grid-area: languages; }
+      body .main-container .languages header {
+        background-color: #663200; }
+    body .main-container .training {
+      grid-area: training; }
+      body .main-container .training header {
+        background-color: #320033;
+        position: relative;
+        z-index: 1; }
+        body .main-container .training header::after {
+          background-position: 0% 90%;
+          background-size: 32%;
+          transform: rotateY(180deg); }
+          @media screen and (max-width: 500px) {
+            body .main-container .training header::after {
+              background-size: 40%; } }
+      @media screen and (max-width: 500px) {
+        body .main-container .training .content > div {
+          margin-bottom: 20px; } }
+    body .main-container .other-experience {
+      grid-area: other-experience; }
+      body .main-container .other-experience header {
+        background-color: #336601; }
+      @media screen and (max-width: 500px) {
+        body .main-container .other-experience .content > div {
+          margin-bottom: 20px; } }
