@@ -121,6 +121,9 @@ body {
       body .main-container section.left header {
         padding: 12px 0 12px 40px;
         color: #fff; }
+        @media screen and (max-width: 500px) {
+          body .main-container section.left header {
+            padding: 12px 0 12px 30px; } }
         body .main-container section.left header h1 {
           margin: 0;
           font-size: 1.5rem;
