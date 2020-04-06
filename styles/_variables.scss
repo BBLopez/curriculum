@@ -30,3 +30,32 @@ $green: #336601;
     background-color: $pink;
     transform: rotate(45deg);
 }
+
+%cherry-flowers-1 {
+     content: '';
+     display: block;
+     position: absolute;
+     z-index: -1;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     background-image: url('../img/cherry-blossom1.png');
+     background-repeat: no-repeat;
+     filter: invert(1) contrast(1%) brightness(60%);
+     opacity: 0.5;
+ }
+
+%cherry-flowers-2 {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('../img/cherry-blossom2.png');
+    background-repeat: no-repeat;
+    opacity: 0.2;
+}

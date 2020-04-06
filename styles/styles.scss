@@ -43,7 +43,22 @@ body {
         .about-me {
             grid-area: about-me;
             color: $pink;
+            position: relative;
+            z-index: 1;
             @extend %text-shadow;
+
+            &::before {
+                 @extend %cherry-flowers-1;
+                 background-position: -15px 20%;
+                 background-size: 100%;
+
+             }
+
+            &::after {
+                @extend %cherry-flowers-1;
+                background-position: 100% 113%;
+                background-size: 245%;
+            }
 
             .image {
                 width: 60%;
@@ -143,6 +158,16 @@ body {
             grid-area: work-experience;
             header {
                 background-color: $darkGreen;
+                position: relative;
+                z-index: 1;
+
+                &::after {
+                    @extend %cherry-flowers-1;
+                    background-position: -13% 69%;
+                    background-size: 45%;
+                    transform: rotateY(180deg);
+                    filter: invert(1) contrast(1%) brightness(80%);
+                }
             }
         }
 
@@ -187,6 +212,15 @@ body {
             grid-area: training;
             header {
                 background-color: $purple;
+                position: relative;
+                z-index: 1;
+
+                &::after {
+                    @extend %cherry-flowers-2;
+                    background-position: 0% 90%;
+                    background-size: 32%;
+                    transform: rotateY(180deg);
+                }
             }
         }
 
