@@ -198,7 +198,7 @@ body {
           filter: invert(1) contrast(1%) brightness(80%); }
           @media screen and (max-width: 500px) {
             body .main-container .work-experience header::after {
-              background-size: 55%; } }
+              background-size: 65%; } }
     body .main-container .technical-skills {
       grid-area: technical-skills; }
       body .main-container .technical-skills header {
@@ -235,7 +235,7 @@ body {
           transform: rotateY(180deg); }
           @media screen and (max-width: 500px) {
             body .main-container .training header::after {
-              background-size: 40%; } }
+              background-size: 45%; } }
       @media screen and (max-width: 500px) {
         body .main-container .training .content > div {
           margin-bottom: 20px; } }
@@ -243,6 +243,14 @@ body {
       grid-area: other-experience; }
       body .main-container .other-experience header {
         background-color: #336601; }
+      body .main-container .other-experience .experience-mobile {
+        display: none; }
+      body .main-container .other-experience .experience-desktop {
+        display: inline; }
       @media screen and (max-width: 500px) {
+        body .main-container .other-experience .experience-desktop {
+          display: none; }
+        body .main-container .other-experience .experience-mobile {
+          display: inline; }
         body .main-container .other-experience .content > div {
           margin-bottom: 20px; } }
