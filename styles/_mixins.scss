@@ -14,6 +14,10 @@
     left: 0;
     top: 7px;
     transform: rotate(45deg);
+
+    @media screen and (max-width: 500px) {
+        top: 10px;
+    }
 }
 
 @mixin pink-square-block {
@@ -22,4 +26,8 @@
     position: absolute;
     left: 0;
     top: 7px;
+
+    @media screen and (max-width: 500px) {
+        top: 10px;
+    }
 }
