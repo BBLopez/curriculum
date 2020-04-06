@@ -313,7 +313,24 @@ body {
                 background-color: $green;
             }
 
+            .experience-mobile {
+                display: none;
+            }
+
+            .experience-desktop {
+                display: inline;
+            }
+
             @media screen and (max-width: 500px) {
+
+                .experience-desktop {
+                    display: none;
+                }
+
+                .experience-mobile {
+                    display: inline;
+                }
+
                 .content > div {
                     margin-bottom: 20px;
                 }
