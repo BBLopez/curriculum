@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/BBLopez/curriculum#readme",
   "devDependencies": {
-    "node-sass": "^4.13.1"
+    "node-sass": "^4.14.1"
   }
 }
