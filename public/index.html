@@ -27,6 +27,10 @@
   </head>
   <body>
     <article class="main-container">
+      <select id="language-selector" class="language-selector">
+        <option value="es">Castellano</option>
+        <option value="ca">Català</option>
+      </select>
       <section class="about-me">
         <header>
           <div class="image">
@@ -34,7 +38,7 @@
           </div>
           <div class="name">
             <div>Bárbara López Pamias</div>
-            <div>Desarrolladora web</div>
+            <div data-i18n="title">Desarrolladora web</div>
           </div>
         </header>
         <ul class="details">
@@ -181,5 +185,6 @@
         </div>
       </section>
     </article>
+    <script src="js/i18n.js"></script>
   </body>
 </html>
