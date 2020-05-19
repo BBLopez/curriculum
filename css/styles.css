@@ -42,7 +42,8 @@ body .main-container .training header::after {
   background-repeat: no-repeat;
   opacity: 0.2; }
 
-body, html {
+body,
+html {
   margin: 0;
   height: 100%;
   font-size: 62.5%; }
@@ -56,6 +57,11 @@ body {
     font-weight: 700; }
   body .cursive {
     font-style: italic; }
+  body a {
+    text-decoration: none;
+    color: #e3b4b7; }
+    body a:hover {
+      color: #D58F94; }
   body .main-container {
     display: grid;
     grid-template-areas: 'about-me work-experience work-experience' 'about-me technical-skills technical-skills' 'about-me general-skills languages' 'about-me training training' 'about-me other-experience other-experience';
