@@ -1,340 +1,346 @@
 @import 'variables';
 @import 'mixins';
 
-body, html {
-    margin: 0;
-    height: 100%;
-    font-size: 62.5%;
+body,
+html {
+  margin: 0;
+  height: 100%;
+  font-size: 62.5%;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: $black;
-    @extend %baloo-font;
+  background-color: $black;
+  @extend %baloo-font;
 
-    .bold {
-        font-weight: 700;
+  .bold {
+    font-weight: 700;
+  }
+
+  .cursive {
+    font-style: italic;
+  }
+
+  a {
+    text-decoration: none;
+    color: lighten($pink, 10);
+
+    &:hover {
+      color: $pink;
+    }
+  }
+
+  .main-container {
+    display: grid;
+    grid-template-areas:
+      'about-me work-experience work-experience'
+      'about-me technical-skills technical-skills'
+      'about-me general-skills languages'
+      'about-me training training'
+      'about-me other-experience other-experience';
+    grid-template-columns: 250px 1fr 1fr;
+    grid-gap: 0;
+    margin: 0 auto;
+    max-width: 768px;
+    background-color: $darkGray;
+    padding-top: 20px;
+    font-size: 1.3rem;
+
+    @media screen and (max-width: 768px) {
+      grid-template-areas:
+        'about-me work-experience work-experience'
+        'about-me technical-skills technical-skills'
+        'about-me general-skills general-skills'
+        'about-me languages languages'
+        'about-me training training'
+        'about-me other-experience other-experience';
     }
 
-    .cursive {
-        font-style: italic;
+    @media screen and (max-width: 500px) {
+      grid-template-areas:
+        'about-me about-me about-me'
+        'work-experience work-experience work-experience'
+        'technical-skills technical-skills technical-skills'
+        'general-skills general-skills general-skills'
+        'languages languages languages'
+        'training training training'
+        'other-experience other-experience other-experience';
+      font-size: 1.8rem;
     }
 
-    .main-container {
-        display: grid;
-        grid-template-areas:
-            'about-me work-experience work-experience'
-            'about-me technical-skills technical-skills'
-            'about-me general-skills languages'
-            'about-me training training'
-            'about-me other-experience other-experience'
-        ;
-        grid-template-columns: 250px 1fr 1fr;
-        grid-gap: 0;
-        margin: 0 auto;
-        max-width: 768px;
-        background-color: $darkGray;
-        padding-top: 20px;
-        font-size: 1.3rem;
+    .about-me {
+      grid-area: about-me;
+      color: $pink;
+      position: relative;
+      z-index: 1;
+      @extend %text-shadow;
 
-        @media screen and (max-width: 768px) {
-            grid-template-areas:
-                    'about-me work-experience work-experience'
-                    'about-me technical-skills technical-skills'
-                    'about-me general-skills general-skills'
-                    'about-me languages languages'
-                    'about-me training training'
-                    'about-me other-experience other-experience'
-            ;
-        }
+      &::before {
+        @extend %cherry-flowers-1;
+        background-position: -15px 20%;
+        background-size: 100%;
 
         @media screen and (max-width: 500px) {
-            grid-template-areas:
-                    'about-me about-me about-me'
-                    'work-experience work-experience work-experience'
-                    'technical-skills technical-skills technical-skills'
-                    'general-skills general-skills general-skills'
-                    'languages languages languages'
-                    'training training training'
-                    'other-experience other-experience other-experience'
-            ;
-            font-size: 1.8rem;
+          background-position: -15px 95%;
+        }
+      }
+
+      &::after {
+        @extend %cherry-flowers-1;
+        background-position: 100% 113%;
+        background-size: 245%;
+
+        @media screen and (max-width: 500px) {
+          display: none;
+        }
+      }
+
+      .image {
+        width: 60%;
+        margin: 0 auto 20px;
+
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+
+      .name {
+        text-align: center;
+        margin-bottom: 40px;
+
+        div:first-child {
+          color: $white;
+          font-size: 1.5rem;
+
+          @media screen and (max-width: 500px) {
+            font-size: 2rem;
+          }
+        }
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 30px;
+        margin-bottom: 30px;
+
+        li {
+          margin-bottom: 20px;
+
+          @media screen and (max-width: 500px) {
+            margin-bottom: 0;
+          }
+
+          div:first-child {
+            color: $white;
+          }
+        }
+      }
+    }
+
+    section.left {
+      background-color: $white;
+
+      header {
+        padding: 12px 0 12px 40px;
+        color: $white;
+        @extend %shadow;
+        @extend %text-shadow;
+
+        @media screen and (max-width: 500px) {
+          padding: 12px 0 12px 30px;
         }
 
-        .about-me {
-            grid-area: about-me;
-            color: $pink;
+        h1 {
+          margin: 0;
+          font-size: 1.5rem;
+          font-weight: 400;
+
+          @media screen and (max-width: 500px) {
+            font-size: 2.5rem;
+          }
+        }
+      }
+
+      .content {
+        padding: 20px 40px;
+        color: $darkGray;
+
+        @media screen and (max-width: 500px) {
+          padding: 30px 40px;
+        }
+
+        h2 {
+          font-weight: 700;
+          font-size: 1.3rem;
+          margin: 0;
+
+          @media screen and (max-width: 500px) {
+            font-size: 1.8rem;
+          }
+        }
+
+        .pink-square-right::after {
+          @include pink-square-right;
+        }
+
+        .pink-square-list {
+          list-style: none;
+          padding: 0;
+
+          li {
             position: relative;
-            z-index: 1;
-            @extend %text-shadow;
+            padding-left: 15px;
 
             &::before {
-                 @extend %cherry-flowers-1;
-                 background-position: -15px 20%;
-                 background-size: 100%;
-
-                @media screen and (max-width: 500px) {
-                    background-position: -15px 95%;
-                }
-             }
-
-            &::after {
-                @extend %cherry-flowers-1;
-                background-position: 100% 113%;
-                background-size: 245%;
-
-                @media screen and (max-width: 500px) {
-                    display: none;
-                }
-            }
-
-            .image {
-                width: 60%;
-                margin: 0 auto 20px;
-
-                img {
-                    display: block;
-                    width: 100%;
-                }
-            }
-
-            .name {
-                text-align: center;
-                margin-bottom: 40px;
-
-                div:first-child {
-                    color: $white;
-                    font-size: 1.5rem;
-
-                    @media screen and (max-width: 500px) {
-                        font-size: 2rem;
-                    }
-                }
-            }
-
-            ul {
-                list-style: none;
-                padding-left: 30px;
-                margin-bottom: 30px;
-
-                li {
-                    margin-bottom: 20px;
-
-                    @media screen and (max-width: 500px) {
-                        margin-bottom: 0;
-                    }
-
-                    div:first-child {
-                        color: $white;
-                    }
-                }
-            }
-        }
-
-        section.left {
-            background-color: $white;
-
-            header {
-                padding: 12px 0 12px 40px;
-                color: $white;
-                @extend %shadow;
-                @extend %text-shadow;
-
-                @media screen and (max-width: 500px) {
-                    padding: 12px 0 12px 30px;
-                }
-
-                h1 {
-                    margin: 0;
-                    font-size: 1.5rem;
-                    font-weight: 400;
-
-                    @media screen and (max-width: 500px) {
-                        font-size: 2.5rem;
-                    }
-                }
-            }
-
-            .content {
-                padding: 20px 40px;
-                color: $darkGray;
-
-                @media screen and (max-width: 500px) {
-                    padding: 30px 40px;
-                }
-
-                h2 {
-                    font-weight: 700;
-                    font-size: 1.3rem;
-                    margin: 0;
-
-                    @media screen and (max-width: 500px) {
-                        font-size: 1.8rem;
-                    }
-                }
-
-                .pink-square-right::after {
-                    @include pink-square-right;
-                }
-
-                .pink-square-list {
-                    list-style: none;
-                    padding: 0;
-
-                    li {
-                        position: relative;
-                        padding-left: 15px;
-
-                        &::before {
-                            @include pink-square-left;
-                        }
-
-                        @media screen and (max-width: 500px) {
-                            margin-bottom: 20px;
-                        }
-                    }
-                }
-
-                .pink-square-block {
-                    position: relative;
-                    padding-left: 15px;
-                    margin-bottom: 10px;
-
-                    @media screen and (max-width: 500px) {
-                        margin-bottom: 20px;
-                    }
-
-                    &::before {
-                        @include pink-square-block;
-                    }
-
-                    &:last-of-type {
-                        margin-bottom: 0;
-                    }
-                }
-            }
-        }
-
-        .work-experience {
-            grid-area: work-experience;
-            header {
-                background-color: $darkGreen;
-                position: relative;
-                z-index: 1;
-
-                &::after {
-                    @extend %cherry-flowers-1;
-                    background-position: -13% 69%;
-                    background-size: 45%;
-                    transform: rotateY(180deg);
-                    filter: invert(1) contrast(1%) brightness(80%);
-
-                    @media screen and (max-width: 500px) {
-                        background-size: 65%;
-                    }
-                }
-            }
-        }
-
-        .technical-skills {
-            grid-area: technical-skills;
-
-            header {
-                background-color: $blue;
-            }
-
-            .content {
-                display: flex;
-                flex-wrap: wrap;
-
-                .technical-skill {
-                    margin-bottom: 20px;
-                    width: 50%;
-                    padding-right: 30px;
-
-                    @media screen and (max-width: 767px) {
-                        width: 100%;
-                    }
-
-                    &:last-of-type, &:last-of-type(2) {
-                        margin-bottom: 0;
-                    }
-                }
-            }
-        }
-
-        .general-skills {
-            grid-area: general-skills;
-            header {
-                background-color: $red;
-            }
-        }
-
-        .languages {
-            grid-area: languages;
-            header {
-                background-color: $brown;
-            }
-        }
-
-        .training {
-            grid-area: training;
-            header {
-                background-color: $purple;
-                position: relative;
-                z-index: 1;
-
-                &::after {
-                    @extend %cherry-flowers-2;
-                    background-position: 0% 90%;
-                    background-size: 32%;
-                    transform: rotateY(180deg);
-
-                    @media screen and (max-width: 500px) {
-                        background-size: 45%;
-                    }
-                }
+              @include pink-square-left;
             }
 
             @media screen and (max-width: 500px) {
-                .content > div {
-                    margin-bottom: 20px;
-                }
+              margin-bottom: 20px;
             }
-
+          }
         }
 
-        .other-experience {
-            grid-area: other-experience;
-            header {
-                background-color: $green;
-            }
+        .pink-square-block {
+          position: relative;
+          padding-left: 15px;
+          margin-bottom: 10px;
 
-            .experience-mobile {
-                display: none;
-            }
+          @media screen and (max-width: 500px) {
+            margin-bottom: 20px;
+          }
 
-            .experience-desktop {
-                display: inline;
-            }
+          &::before {
+            @include pink-square-block;
+          }
 
-            @media screen and (max-width: 500px) {
-
-                .experience-desktop {
-                    display: none;
-                }
-
-                .experience-mobile {
-                    display: inline;
-                }
-
-                .content > div {
-                    margin-bottom: 20px;
-                }
-            }
+          &:last-of-type {
+            margin-bottom: 0;
+          }
         }
+      }
     }
+
+    .work-experience {
+      grid-area: work-experience;
+      header {
+        background-color: $darkGreen;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+          @extend %cherry-flowers-1;
+          background-position: -13% 69%;
+          background-size: 45%;
+          transform: rotateY(180deg);
+          filter: invert(1) contrast(1%) brightness(80%);
+
+          @media screen and (max-width: 500px) {
+            background-size: 65%;
+          }
+        }
+      }
+    }
+
+    .technical-skills {
+      grid-area: technical-skills;
+
+      header {
+        background-color: $blue;
+      }
+
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+
+        .technical-skill {
+          margin-bottom: 20px;
+          width: 50%;
+          padding-right: 30px;
+
+          @media screen and (max-width: 767px) {
+            width: 100%;
+          }
+
+          &:last-of-type,
+          &:last-of-type(2) {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    .general-skills {
+      grid-area: general-skills;
+      header {
+        background-color: $red;
+      }
+    }
+
+    .languages {
+      grid-area: languages;
+      header {
+        background-color: $brown;
+      }
+    }
+
+    .training {
+      grid-area: training;
+      header {
+        background-color: $purple;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+          @extend %cherry-flowers-2;
+          background-position: 0% 90%;
+          background-size: 32%;
+          transform: rotateY(180deg);
+
+          @media screen and (max-width: 500px) {
+            background-size: 45%;
+          }
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        .content > div {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .other-experience {
+      grid-area: other-experience;
+      header {
+        background-color: $green;
+      }
+
+      .experience-mobile {
+        display: none;
+      }
+
+      .experience-desktop {
+        display: inline;
+      }
+
+      @media screen and (max-width: 500px) {
+        .experience-desktop {
+          display: none;
+        }
+
+        .experience-mobile {
+          display: inline;
+        }
+
+        .content > div {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
 }
