@@ -1,18 +1,46 @@
 const languageSelector = document.getElementById('language-selector');
+const availableLanguages = ['ca', 'es'];
+const url = new URL(window.location.href);
+const urlParams = new URLSearchParams(url.search);
 
 window.onload = () => {
-  const url = new URL(window.location.href);
-  const language = url.searchParams.get('lang');
+  languageSelector.addEventListener('change', (e) => {
+    getTranslations(e.target.value);
+  });
 
-  const availableLanguages = ['ca', 'es'];
-
-  if (language && availableLanguages.includes(language)) {
-    languageSelector.value = language;
-  }
+  selectLanguageFromParam();
 };
 
-languageSelector.addEventListener('change', (e) => {
-  const language = e.target.value;
+function translate(translations) {
+  const elementsToTranslate = document.querySelectorAll('[data-i18n]');
+
+  elementsToTranslate.forEach((element) => {
+    const translationKey = element.getAttribute('data-i18n');
+    element.textContent = translations[translationKey];
+  });
+}
+
+function selectLanguageFromParam() {
+  const lang = urlParams.get('lang');
+  if (lang) {
+    languageSelector.value = lang;
+    getTranslations(lang);
+  }
+}
+
+function setParamsToUrl(selectedLanguage) {
+  const currentUrl = new URL(window.location.href);
+  const params = new URLSearchParams(currentUrl.search);
+
+  params.set('lang', selectedLanguage);
+
+  currentUrl.search = params.toString();
+
+  history.pushState(null, 'Bárbara López CV', currentUrl);
+}
+
+function getTranslations(language) {
+  setParamsToUrl(language);
 
   fetch(`translations/translations.${language}.json`, {
     headers: { 'Content-Type': 'application/json; charset=utf-8' },
@@ -24,13 +52,4 @@ languageSelector.addEventListener('change', (e) => {
     .catch((err) => {
       console.log(err);
     });
-});
-
-function translate(translations) {
-  const elementsToTranslate = document.querySelectorAll('[data-i18n]');
-
-  elementsToTranslate.forEach((element) => {
-    const translationKey = element.getAttribute('data-i18n');
-    element.textContent = translations[translationKey];
-  });
 }
