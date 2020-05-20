@@ -86,6 +86,17 @@ body {
       background-color: $darkGray;
     }
 
+    a {
+      .fa-whatsapp {
+        color: #06d755;
+        font-size: 1.5rem;
+        margin-left: 3px;
+      }
+      &:hover .fa-whatsapp {
+        color: lighten(#06d755, 20);
+      }
+    }
+
     .about-me {
       grid-area: about-me;
       color: $pink;
