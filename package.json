@@ -4,8 +4,8 @@
   "description": "curriculum",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "node-sass -w styles -o public/css"
+    "sass": "node-sass -w styles -o public/css",
+    "start": "http-server public"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/BBLopez/curriculum#readme",
   "devDependencies": {
+    "http-server": "^0.12.3",
     "node-sass": "^4.14.1"
   }
 }
