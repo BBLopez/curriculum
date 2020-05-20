@@ -27,10 +27,13 @@
   </head>
   <body>
     <article class="main-container">
-      <select id="language-selector" class="language-selector">
-        <option value="es">Castellano</option>
-        <option value="ca">Català</option>
-      </select>
+      <div class="language-selector-container">
+        <i class="fas fa-globe"></i>
+        <select id="language-selector" class="language-selector">
+          <option value="es">Castellano</option>
+          <option value="ca">Català</option>
+        </select>
+      </div>
       <section class="about-me">
         <header>
           <div class="image">
@@ -38,24 +41,24 @@
           </div>
           <div class="name">
             <div>Bárbara López Pamias</div>
-            <div data-i18n="title">Desarrolladora web</div>
+            <div data-i18n="developer">Desarrolladora web</div>
           </div>
         </header>
         <ul class="details">
           <li>
-            <div>Fecha de nacimiento</div>
+            <div data-i18n="dateOfBirth">Fecha de nacimiento</div>
             <div>13/12/1992</div>
           </li>
           <li>
-            <div>Localidad</div>
+            <div data-i18n="location">Localidad</div>
             <div>Sant Celoni</div>
           </li>
           <li>
-            <div>Teléfono</div>
+            <div data-i18n="phone">Teléfono</div>
             <div>647 50 72 80</div>
           </li>
           <li>
-            <div>Correo electrónico</div>
+            <div data-i18n="email">Correo electrónico</div>
             <div>
               <a target="_blank" href="mailto:barbaralopezpamias@gmail.com"
                 >barbaralopezpamias@gmail.com</a
@@ -66,26 +69,32 @@
       </section>
       <section id="work-experience" class="work-experience left">
         <header>
-          <h1>Experiencia laboral</h1>
+          <h1 data-i18n="workExpirience">Experiencia laboral</h1>
         </header>
         <div class="content">
           <div class="pink-square-block">
             <div>
-              <span class="bold">Desarrolladora web</span> en
+              <span data-i18n="developer" class="bold">Desarrolladora web</span>
+              <span data-i18n="in">en</span>
               <span class="cursive">Perception Technologies S.L.</span>
             </div>
             <div>
-              <span class="bold pink-square-right">Abril 2019 - Actualidad</span
+              <span class="bold pink-square-right"
+                ><span data-i18n="april">Abril</span> 2019 -
+                <span data-i18n="currently">Actualidad</span></span
               >Les Franqueses del Vallès
             </div>
           </div>
           <div class="pink-square-block">
             <div>
-              <span class="bold">Desarrolladora web</span> (Formación DUAL) en
+              <span data-i18n="developer" class="bold">Desarrolladora web</span>
+              (Formación DUAL) <span data-i18n="in">en</span>
               <span class="cursive">Infojic BCN S.L.</span>
             </div>
             <div>
-              <span class="bold pink-square-right">Mayo 2018 - Marzo 2019</span
+              <span class="bold pink-square-right"
+                ><span data-i18n="may">Mayo</span> 2018 -
+                <span data-i18n="march">Marzo</span> 2019</span
               >Granollers
             </div>
           </div>
@@ -93,94 +102,113 @@
       </section>
       <section id="technical-skills" class="technical-skills left">
         <header>
-          <h1>Competencias técnicas</h1>
+          <h1 data-i18n="technicalSkills">Competencias técnicas</h1>
         </header>
         <div class="content">
           <div class="technical-skill">
-            <h2>Lenguajes de programación</h2>
+            <h2 data-i18n="programmingLanguages">Lenguajes de programación</h2>
             PHP, Javascript, Java3
           </div>
           <div class="technical-skill">
-            <h2>Lenguajes de marcado</h2>
+            <h2 data-i18n="markupLanguages">Lenguajes de marcado</h2>
             HTML5, CSS3
           </div>
           <div class="technical-skill">
-            <h2>Gestión de Bases de Datos</h2>
+            <h2 data-i18n="databaseManagement">Gestión de Bases de Datos</h2>
             MySQL
           </div>
           <div class="technical-skill">
-            <h2>Control de versiones</h2>
+            <h2 data-i18n="versionControl">Control de versiones</h2>
             Git, GitHub
           </div>
           <div class="technical-skill">
-            <h2>Frameworks/herramientas</h2>
+            <h2 data-i18n="frameworksAndTools">Frameworks/herramientas</h2>
             jQuery, Bootstrap 3 & 4, Symfony 3.4 & 4, SASS, Gulp
           </div>
           <div class="technical-skill">
-            <h2>Diseño gráfico</h2>
-            Nociones de Photoshop, Balsamiq Mockups 3, Figma
+            <h2 data-i18n="graphicDesign">Diseño gráfico</h2>
+            Photoshop, Balsamiq Mockups 3, Figma
           </div>
         </div>
       </section>
       <section id="general-skills" class="general-skills left">
         <header>
-          <h1>Competencias generales</h1>
+          <h1 data-i18n="generalSkills">Competencias generales</h1>
         </header>
         <div class="content">
           <ul class="pink-square-list">
-            <li>Facilidad de aprendizaje</li>
-            <li>Creativa</li>
-            <li>Sociable y empática</li>
-            <li>Capacidad de autonomía y de trabajo en equipo</li>
+            <li data-i18n="easeOfLearning">Facilidad de aprendizaje</li>
+            <li data-i18n="creative">Creativa</li>
+            <li data-i18n="sociableAndEmphatetic">Sociable y empática</li>
+            <li data-i18n="autonomousAndTeamWork">
+              Capacidad de autonomía y de trabajo en equipo
+            </li>
           </ul>
         </div>
       </section>
       <section id="languages" class="languages left">
         <header>
-          <h1>Idiomas</h1>
+          <h1 data-i18n="languages">Idiomas</h1>
         </header>
         <div class="content">
           <ul class="pink-square-list">
-            <li><span class="bold">Catalán</span> - Nativo</li>
-            <li><span class="bold">Castellano</span> - Nativo</li>
-            <li><span class="bold">Inglés</span> - B1</li>
+            <li>
+              <span data-i18n="catalan" class="bold">Catalán</span> -
+              <span data-i18n="native">Nativo</span>
+            </li>
+            <li>
+              <span data-i18n="spanish" class="bold">Castellano</span> -
+              <span data-i18n="native">Nativo</span>
+            </li>
+            <li><span data-i18n="english" class="bold">Inglés</span> - B1</li>
           </ul>
         </div>
       </section>
       <section id="training" class="training left">
         <header>
-          <h1>Formación</h1>
+          <h1 data-i18n="training">Formación</h1>
         </header>
         <div class="content">
           <div>
-            <span class="bold pink-square-right">2019</span>Curso de Flexbox y
-            CSS Grid - <span class="cursive">OpenWebinars</span>
+            <span class="bold pink-square-right">2019</span
+            ><span data-i18n="course">Curso de</span> Flexbox
+            <span data-i18n="and">y</span> CSS Grid -
+            <span class="cursive">OpenWebinars</span>
           </div>
           <div>
-            <span class="bold pink-square-right">2019</span>CFGS Desarrollo de
-            Aplicaciones Web - <span class="cursive">IES Carles Vallbona</span>
+            <span class="bold pink-square-right">2019</span>CFGS
+            <span data-i18n="daw">Desarrollo de Aplicaciones Web</span> -
+            <span class="cursive">IES Carles Vallbona</span>
           </div>
           <div>
-            <span class="bold pink-square-right">2019</span>CFGM Técnica en
-            atención a personas dependientes
+            <span class="bold pink-square-right">2019</span>CFGM
+            <span data-i18n="tapd"
+              >Técnica en Atención a Personas Dependientes</span
+            >
           </div>
         </div>
       </section>
       <section id="other-experience" class="other-experience left">
         <header>
           <h1>
-            <span class="experience-desktop">Experiencia</span
-            ><span class="experience-mobile">Exp.</span> en otros sectores
+            <span class="experience-desktop" data-i18n="experience"
+              >Experiencia</span
+            ><span class="experience-mobile">Exp.</span>
+            <span data-i18n="inAnotherSectors">en otros sectores</span>
           </h1>
         </header>
         <div class="content">
           <div>
-            <span class="bold pink-square-right">2017 - 2018</span>Técnica en
-            atención a personas dependientes
+            <span class="bold pink-square-right">2017 - 2018</span
+            ><span data-i18n="tapd"
+              >Técnica en atención a personas dependientes</span
+            >
           </div>
           <div>
-            <span class="bold pink-square-right">2013 - 2016</span>Monitora
-            Infantil
+            <span class="bold pink-square-right">2013 - 2016</span
+            ><span data-i18n="instructor"
+              >Monitora de tiempo libre Infantil</span
+            >
           </div>
         </div>
       </section>

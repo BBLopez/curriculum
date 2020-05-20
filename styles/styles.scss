@@ -72,10 +72,14 @@ body {
       font-size: 1.8rem;
     }
 
-    .language-selector {
+    .language-selector-container {
       position: absolute;
+      color: $white;
       top: 0;
       right: 0;
+    }
+
+    .language-selector {
       border: none;
       color: $white;
       outline: none;
