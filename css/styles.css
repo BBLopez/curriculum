@@ -71,7 +71,8 @@ body {
     max-width: 768px;
     background-color: #1C1C1C;
     padding-top: 20px;
-    font-size: 1.3rem; }
+    font-size: 1.3rem;
+    position: relative; }
     @media screen and (max-width: 768px) {
       body .main-container {
         grid-template-areas: 'about-me work-experience work-experience' 'about-me technical-skills technical-skills' 'about-me general-skills general-skills' 'about-me languages languages' 'about-me training training' 'about-me other-experience other-experience'; } }
@@ -79,6 +80,16 @@ body {
       body .main-container {
         grid-template-areas: 'about-me about-me about-me' 'work-experience work-experience work-experience' 'technical-skills technical-skills technical-skills' 'general-skills general-skills general-skills' 'languages languages languages' 'training training training' 'other-experience other-experience other-experience';
         font-size: 1.8rem; } }
+    body .main-container .language-selector-container {
+      position: absolute;
+      color: #fff;
+      top: 0;
+      right: 0; }
+    body .main-container .language-selector {
+      border: none;
+      color: #fff;
+      outline: none;
+      background-color: #1C1C1C; }
     body .main-container .about-me {
       grid-area: about-me;
       color: #D58F94;
