@@ -1,5 +1,16 @@
 const languageSelector = document.getElementById('language-selector');
 
+window.onload = () => {
+  const url = new URL(window.location.href);
+  const language = url.searchParams.get('lang');
+
+  const availableLanguages = ['ca', 'es'];
+
+  if (language && availableLanguages.includes(language)) {
+    languageSelector.value = language;
+  }
+};
+
 languageSelector.addEventListener('change', (e) => {
   const language = e.target.value;
 
