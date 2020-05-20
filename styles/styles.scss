@@ -48,6 +48,7 @@ body {
     background-color: $darkGray;
     padding-top: 20px;
     font-size: 1.3rem;
+    position: relative;
 
     @media screen and (max-width: 768px) {
       grid-template-areas:
@@ -69,6 +70,20 @@ body {
         'training training training'
         'other-experience other-experience other-experience';
       font-size: 1.8rem;
+    }
+
+    .language-selector-container {
+      position: absolute;
+      color: $white;
+      top: 0;
+      right: 0;
+    }
+
+    .language-selector {
+      border: none;
+      color: $white;
+      outline: none;
+      background-color: $darkGray;
     }
 
     .about-me {
