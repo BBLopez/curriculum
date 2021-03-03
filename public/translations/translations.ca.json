@@ -34,5 +34,7 @@
   "tapd": "Tècnica en Atenció a Persones Dependents",
   "experience": "Experiència",
   "inAnotherSectors": "en altres sectors",
-  "instructor": "Monitora de lleure infantil"
+  "instructor": "Monitora de lleure infantil",
+  "in_progress":"(en curs)",
+  "master_ux": "Màster en Disseny Web Multidispositiu: UX/UI"
 }
