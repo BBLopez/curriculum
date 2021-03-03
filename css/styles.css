@@ -167,12 +167,22 @@ body {
           @media screen and (max-width: 500px) {
             body .main-container section.left .content h2 {
               font-size: 1.8rem; } }
-        body .main-container section.left .content .pink-square-right::after {
-          position: relative;
+        body .main-container section.left .content .year {
           display: inline-block;
-          margin: 0 10px 0 7px;
-          top: 50%;
-          transform: rotate(45deg) translateY(-50%); }
+          min-width: 52px;
+          text-align: right; }
+        body .main-container section.left .content .text-pink {
+          color: #D58F94; }
+        body .main-container section.left .content .pink-square-right {
+          position: relative;
+          padding-right: 22px; }
+          body .main-container section.left .content .pink-square-right::after {
+            position: absolute;
+            right: 0;
+            display: inline-block;
+            margin: 0 10px 0 7px;
+            top: 40%;
+            transform: rotate(45deg) translateY(-50%); }
         body .main-container section.left .content .pink-square-list {
           list-style: none;
           padding: 0; }
