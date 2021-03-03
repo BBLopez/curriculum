@@ -209,8 +209,23 @@ body {
           }
         }
 
-        .pink-square-right::after {
-          @include pink-square-right;
+        .year {
+          display: inline-block;
+          min-width: 52px;
+          text-align: right;
+        }
+
+        .text-pink {
+          color: $pink;
+        }
+
+        .pink-square-right {
+          position: relative;
+          padding-right: 22px;
+
+          &::after {
+            @include pink-square-right;
+          }
         }
 
         .pink-square-list {

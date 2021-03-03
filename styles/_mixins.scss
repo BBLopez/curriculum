@@ -1,33 +1,34 @@
 @mixin pink-square-right {
-    @extend %pink-square;
-    position: relative;
-    display: inline-block;
-    margin: 0 10px 0 7px;
-    top: 50%;
-    transform: rotate(45deg) translateY(-50%);
+  @extend %pink-square;
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  margin: 0 10px 0 7px;
+  top: 40%;
+  transform: rotate(45deg) translateY(-50%);
 }
 
 @mixin pink-square-left {
-    @extend %pink-square;
-    position: absolute;
-    display: inline-block;
-    left: 0;
-    top: 7px;
-    transform: rotate(45deg);
+  @extend %pink-square;
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  top: 7px;
+  transform: rotate(45deg);
 
-    @media screen and (max-width: 500px) {
-        top: 10px;
-    }
+  @media screen and (max-width: 500px) {
+    top: 10px;
+  }
 }
 
 @mixin pink-square-block {
-    @extend %pink-square;
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 7px;
+  @extend %pink-square;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 7px;
 
-    @media screen and (max-width: 500px) {
-        top: 10px;
-    }
+  @media screen and (max-width: 500px) {
+    top: 10px;
+  }
 }
