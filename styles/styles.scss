@@ -231,6 +231,7 @@ body {
         .pink-square-list {
           list-style: none;
           padding: 0;
+          margin: 0;
 
           li {
             position: relative;
@@ -383,5 +384,78 @@ body {
         }
       }
     }
+  }
+}
+
+@media print {
+  body {
+    .main-container {
+      background-color: $white;
+
+      .language-selector-container {
+        display: none;
+      }
+
+      .about-me {
+        background-color: $white;
+        color: $black;
+        text-shadow: none;
+
+        header {
+          background-color: $white!important;
+          border-bottom: none!important;
+          padding: 12px 40px 12px 0!important;
+        }
+
+        .details {
+          padding: 0;
+        }
+    
+        &::before, &::after {
+          background-image: none;
+        }
+
+        ul li div:first-child, .name div:first-child {
+          color: $black;
+          font-weight: bold;
+        }
+      }
+
+      section {
+        
+        &.left {
+          .content {
+            padding: 20px 20px 0;
+          }
+        }
+
+        header {
+          background-color: $white!important;
+          border-bottom: 1px solid $darkGray;
+          padding: 12px!important;
+          box-shadow: none!important;
+        
+          &::before, &::after {
+            background-image: none!important;
+          }
+  
+          h1 {
+            color: $black!important;
+            text-shadow: none!important;
+            font-weight: bold!important;
+            font-size: 1.8rem!important;
+          }
+        }
+      }
+    }
+    
+    a {
+      color: $black;
+
+      .fa-whatsapp {
+        display: none;
+      }
+    }
+
   }
 }

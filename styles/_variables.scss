@@ -2,6 +2,7 @@
 $black: #000;
 $darkGray: #1C1C1C;
 $gray: #343434;
+$lightgray: #cecece;
 $white: #fff;
 $pink: #D58F94;
 $darkGreen: #003334;
@@ -29,6 +30,11 @@ $green: #336601;
     height: 5px;
     background-color: $pink;
     transform: rotate(45deg);
+
+    @media print {
+        background-color: $darkGray;
+        -webkit-print-color-adjust: exact; 
+    }
 }
 
 %cherry-flowers-1 {
