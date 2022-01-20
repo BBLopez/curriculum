@@ -72,18 +72,34 @@ body {
       font-size: 1.8rem;
     }
 
-    .language-selector-container {
+    .actions {
       position: absolute;
-      color: $white;
-      top: 0;
-      right: 0;
-    }
+        top: 0;
+        right: 0;
+        display: flex;
 
-    .language-selector {
-      border: none;
-      color: $white;
-      outline: none;
-      background-color: $darkGray;
+      .download-action-container {
+        margin-right: 12px;
+
+        button {
+          color: $white;
+          background-color: transparent;
+          border:none;
+          cursor: pointer;
+        }
+      }
+  
+      .language-selector-container {
+        color: $white;
+      }
+  
+      .language-selector {
+        border: none;
+        color: $white;
+        outline: none;
+        background-color: $darkGray;
+        cursor: pointer;
+      }
     }
 
     a {
@@ -392,7 +408,7 @@ body {
     .main-container {
       background-color: $white;
 
-      .language-selector-container {
+      .actions {
         display: none;
       }
 
