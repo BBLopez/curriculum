@@ -14,6 +14,10 @@ body .main-container section.left .content .pink-square-right::after, body .main
   height: 5px;
   background-color: #D58F94;
   transform: rotate(45deg); }
+  @media print {
+    body .main-container section.left .content .pink-square-right::after, body .main-container section.left .content .pink-square-list li::before, body .main-container section.left .content .pink-square-block::before {
+      background-color: #1C1C1C;
+      -webkit-print-color-adjust: exact; } }
 
 body .main-container .about-me::before, body .main-container .about-me::after, body .main-container .work-experience header::after {
   content: '';
@@ -80,16 +84,26 @@ body {
       body .main-container {
         grid-template-areas: 'about-me about-me about-me' 'work-experience work-experience work-experience' 'technical-skills technical-skills technical-skills' 'general-skills general-skills general-skills' 'languages languages languages' 'training training training' 'other-experience other-experience other-experience';
         font-size: 1.8rem; } }
-    body .main-container .language-selector-container {
+    body .main-container .actions {
       position: absolute;
-      color: #fff;
       top: 0;
-      right: 0; }
-    body .main-container .language-selector {
-      border: none;
-      color: #fff;
-      outline: none;
-      background-color: #1C1C1C; }
+      right: 0;
+      display: flex; }
+      body .main-container .actions .download-action-container {
+        margin-right: 12px; }
+        body .main-container .actions .download-action-container button {
+          color: #fff;
+          background-color: transparent;
+          border: none;
+          cursor: pointer; }
+      body .main-container .actions .language-selector-container {
+        color: #fff; }
+      body .main-container .actions .language-selector {
+        border: none;
+        color: #fff;
+        outline: none;
+        background-color: #1C1C1C;
+        cursor: pointer; }
     body .main-container a .fa-whatsapp {
       color: #06d755;
       font-size: 1.5rem;
@@ -185,7 +199,8 @@ body {
             transform: rotate(45deg) translateY(-50%); }
         body .main-container section.left .content .pink-square-list {
           list-style: none;
-          padding: 0; }
+          padding: 0;
+          margin: 0; }
           body .main-container section.left .content .pink-square-list li {
             position: relative;
             padding-left: 15px; }
@@ -287,3 +302,42 @@ body {
           display: inline; }
         body .main-container .other-experience .content > div {
           margin-bottom: 20px; } }
+
+@media print {
+  body .main-container {
+    background-color: #fff; }
+    body .main-container .actions {
+      display: none; }
+    body .main-container .about-me {
+      background-color: #fff;
+      color: #000;
+      text-shadow: none; }
+      body .main-container .about-me header {
+        background-color: #fff !important;
+        border-bottom: none !important;
+        padding: 12px 40px 12px 0 !important; }
+      body .main-container .about-me .details {
+        padding: 0; }
+      body .main-container .about-me::before, body .main-container .about-me::after {
+        background-image: none; }
+      body .main-container .about-me ul li div:first-child, body .main-container .about-me .name div:first-child {
+        color: #000;
+        font-weight: bold; }
+    body .main-container section.left .content {
+      padding: 20px 20px 0; }
+    body .main-container section header {
+      background-color: #fff !important;
+      border-bottom: 1px solid #1C1C1C;
+      padding: 12px !important;
+      box-shadow: none !important; }
+      body .main-container section header::before, body .main-container section header::after {
+        background-image: none !important; }
+      body .main-container section header h1 {
+        color: #000 !important;
+        text-shadow: none !important;
+        font-weight: bold !important;
+        font-size: 1.8rem !important; }
+  body a {
+    color: #000; }
+    body a .fa-whatsapp {
+      display: none; } }

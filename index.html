@@ -10,7 +10,7 @@
     <meta property="og:title" content="Bárbara López CV" />
     <meta
       property="og:image"
-      content="https://repository-images.githubusercontent.com/247749135/c76de5c7-1d1d-4abb-bcfc-41cb6e5eaa3f"
+      content="//repository-images.githubusercontent.com/247749135/29f57880-9629-11ea-815c-ee86c0b1e20f"
     />
     <meta
       property="og:description"
@@ -27,12 +27,17 @@
   </head>
   <body>
     <article class="main-container">
-      <div class="language-selector-container">
-        <i class="fas fa-globe"></i>
-        <select id="language-selector" class="language-selector">
-          <option value="es">Castellano</option>
-          <option value="ca">Català</option>
-        </select>
+      <div class="actions">
+        <div class="download-action-container">
+          <button id="download" type="button"><i class="fas fa-download"></i> <span data-i18n="download">Descargar / Imprimir</span></button>
+        </div>
+        <div class="language-selector-container">
+          <i class="fas fa-globe"></i>
+          <select id="language-selector" class="language-selector">
+            <option value="es">Castellano</option>
+            <option value="ca">Català</option>
+          </select>
+        </div>
       </div>
       <section class="about-me">
         <header>
@@ -51,7 +56,7 @@
           </li>
           <li>
             <div data-i18n="location">Localidad</div>
-            <div>Barcelona</div>
+            <div>Sant Celoni</div>
           </li>
           <li>
             <div data-i18n="phone">Teléfono</div>
@@ -230,5 +235,10 @@
       </section>
     </article>
     <script src="js/i18n.js"></script>
+    <script>
+      document.getElementById('download').addEventListener('click', () => {
+            window.print();
+        });
+    </script>
   </body>
 </html>
