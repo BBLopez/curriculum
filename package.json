@@ -19,6 +19,6 @@
   "homepage": "https://github.com/BBLopez/curriculum#readme",
   "devDependencies": {
     "http-server": "^0.12.3",
-    "node-sass": "^4.14.1"
+    "node-sass": "^7.0.0"
   }
 }
